@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+body, html {
+  overflow-x: hidden;
+}
+
 p, a, h1, h2, h3, h4, li, ul, button {
   margin: 0;
   padding: 0;
@@ -333,11 +337,12 @@ main .why .why__coll img.plus {
 }
 
 main .why .why__coll img.plusb {
-  top: 681px;
+  top: 674px;
   right: 38px;
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
   z-index: 20;
+  height: 64px;
 }
 
 main .why .why__colr {
@@ -349,6 +354,7 @@ main .why .why__colr .cercl {
   top: 1157px;
   z-index: 20;
   right: 50px;
+  height: 66px;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
@@ -408,11 +414,13 @@ main .advant .cercll {
 main .advant .plus {
   top: 652px;
   right: -16%;
+  height: 64px;
 }
 
 main .advant .plusr {
   top: 1576px;
   left: -7%;
+  height: 64px;
 }
 
 main .advant .advant__row .advant__item {
@@ -572,9 +580,21 @@ main .for .for__rowb .rowb__colr .colr__item h1 {
 
 main .for .for__rowb .rowb__colr .colr__item.img {
   padding: 0;
-  -webkit-box-shadow: 5px 5px 0 0 #B82B40;
-          box-shadow: 5px 5px 0 0 #B82B40;
+  position: relative;
+  z-index: 2;
   margin-bottom: 30px;
+}
+
+main .for .for__rowb .rowb__colr .colr__item.img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  z-index: -1;
+  right: -5px;
+  background: #B82B40;
+  width: 535px;
+  height: 292px;
 }
 
 main .for .for__rowb .rowb__colr .red-btn button {

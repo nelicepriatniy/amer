@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+body, html {
+    overflow-x: hidden;
+}
+
+
 
 p, a, h1, h2, h3, h4, li, ul, button {
     margin: 0;
@@ -274,10 +279,11 @@ main {
                     transform: translate(50%, -50%);
                 }
                 &.plusb {
-                    top: 681px;
+                    top: 674px;
                     right: 38px;
                     transform: translate(0%, 0%);
                     z-index: 20;
+                    height: 64px;
                 }
             }
         }
@@ -288,6 +294,7 @@ main {
                     top: 1157px;
                     z-index: 20;
                     right: 50px;
+                    height: 66px;
                     transform: translate(50%, -50%);
                 }
                 
@@ -343,10 +350,12 @@ main {
         & .plus {
             top: 652px;
             right: -16%;
+            height: 64px;
         }
         & .plusr {
             top: 1576px;
             left: -7%;
+            height: 64px;
         }
         & .advant__row {
             & .advant__item {
@@ -458,8 +467,20 @@ main {
                     }
                     &.img {
                         padding: 0;
-                        box-shadow: 5px 5px 0 0 #B82B40;
+                        position: relative;
+                        z-index: 2;
                         margin-bottom: 30px;
+                        &::after{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            bottom: -5px;
+                            z-index: -1;
+                            right: -5px;
+                            background: #B82B40;
+                            width: 535px;
+                            height: 292px;
+                        }
                     }
                     
                 }
