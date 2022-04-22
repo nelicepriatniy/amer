@@ -1325,8 +1325,11 @@ footer {
                 }
         }
         & .ture {
+            overflow: hidden;
             height: 330px;
             & .ture__bg {
+                overflow: hidden;
+                width: 100%;
                 position: absolute;
                 height: 330px;
                 & img {

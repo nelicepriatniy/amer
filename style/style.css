@@ -1546,9 +1546,12 @@ footer .footer__icons a:last-child {
     width: 100%;
   }
   main .ture {
+    overflow: hidden;
     height: 330px;
   }
   main .ture .ture__bg {
+    overflow: hidden;
+    width: 100%;
     position: absolute;
     height: 330px;
   }
