@@ -29,6 +29,10 @@ p, a, h1, h2, h3, h4, li, ul, button {
     }
 }
 
+.mobile__menu {
+    display: none;
+}
+
 header {
     background: #232323;
     & .container {
@@ -933,6 +937,128 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    .mobile__menu {
+        display: block;
+        & .burger {
+            background: #b82b407a;
+            width: 36px;
+            height: 36px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 60;
+            border-radius: 50px;
+            & .line {
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background: #ffffff;
+                transition: all .4s ease;
+                top: 50%;
+                left: 50%;
+                z-index: 60;
+                transform: translate(-50%, -50%);
+                &::after {
+                    transition: all .4s ease;
+                    background: #ffffff;
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 1px;
+                    position: absolute;
+                    top: 6px;
+                }
+                &::before {
+                    transition: all .4s ease;
+                    background: #ffffff;
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 1px;
+                    position: absolute;
+                    top: -6px;
+                }
+                &.active {
+                    height: 1px;
+                    transform: rotate(45deg);
+                    &::after {
+                        width: 0;
+                    }
+                    &::before {
+                        transform: rotate(-90deg);
+                        top: 0;
+                    }
+                }
+            }
+        }
+        & .menu {
+            transition: all .4s ease;
+            position: fixed;
+            background: #1E1E1E;
+            padding: 60px 20px;
+            right: -100%;
+            top: 0;
+            width: 80%;
+            height: 100%;
+            z-index: 50;
+            border-left: 4px solid #922636;
+            &.active {
+                right: 0;
+            }
+            & ul {
+                list-style: none;
+                align-items: center;
+                margin-bottom: 40%;
+                & li {
+                    color: white;
+                    font-weight: 500;
+                    margin-right: 25px;
+                    position: relative;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    line-height: 20px;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        position: absolute;
+                        background: #922636;
+                        transition: all .4s ease;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            & .footer__icons {
+                display: flex;
+                margin-bottom: 20px;
+                justify-content: space-between;
+                & a {
+                    & img {
+                        width: 40px;
+                    }
+                }
+            }
+            & .red-btn {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                & button {
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
 
     .container {
         width: 96%;

@@ -37,3 +37,20 @@ questBtn.forEach(element => {
         console.log(qBlock);
     })
 });
+
+//mobile menu
+
+let mobbtn = document.querySelector('.line');
+let menu = document.querySelector('.menu');
+
+mobbtn.addEventListener('click', function(){
+    mobbtn.classList.toggle('active')
+    menu.classList.toggle('active');
+})
+let mobbtnb = document.querySelectorAll('.lineb');
+mobbtnb.forEach(element => {
+    element.addEventListener('click', function(){
+        mobbtn.classList.toggle('active')
+        menu.classList.toggle('active');
+    })
+});
